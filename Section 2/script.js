@@ -322,33 +322,112 @@ if (x === 5) {
  * Operator Precedence
  ************************************/
 
-var now = 2018;
-var yearJohn = 1989;
-var fullAge = 18;
+// var now = 2018;
+// var yearJohn = 1989;
+// var fullAge = 18;
 
-// Multiple operators
-var isFullAge = now - yearJohn >= fullAge;
-console.log(isFullAge);
+// // Multiple operators
+// var isFullAge = now - yearJohn >= fullAge;
+// console.log(isFullAge);
 
 // Grouping
-var ageJohn = now - yearJohn;
-var ageMark = 35;
-var average = (ageJohn + ageMark) / 2;
-console.log(average);
+// var ageJohn = now - yearJohn;
+// var ageMark = 35;
+// var average = (ageJohn + ageMark) / 2;
+// console.log(average);
 
-// Multiple assignments
-var x, y;
-x = y = (3 + 5) * 4 - 6; // 8 * 4 - 6 // 32 - 6 // 26
-console.log(x, y);
+// // Multiple assignments
+// var x, y;
+// x = y = (3 + 5) * 4 - 6; // 8 * 4 - 6 // 32 - 6 // 26
+// console.log(x, y);
 
 
 // More operators
 
-x *= 2;
-console.log(x);
-x += 10;
-console.log(x);
-x++;
-console.log(x);
-x--;
-console.log(x);
+// x *= 2;
+// console.log(x);
+// x += 10;
+// console.log(x);
+// x++;
+// console.log(x);
+// x--;
+// console.log(x);
+
+/************************************
+ * Coding Challenge 1
+ ************************************/
+
+// var markHeight = 2.1;
+// var johnHeight = 2.2;
+// var markWeight = 130;
+// var johnWeight = 165;
+
+// var markBmi = markWeight / (markHeight * markHeight);
+// var johnBmi = johnWeight / (johnHeight * johnHeight);
+// var higher = markBmi > johnBmi;
+// console.log("Is Mark's BMI higher than John's? ", higher);
+
+
+/************************************
+ * Boolean Logic
+ ************************************/
+
+//  var firstName = "John";
+//  var age = 26;
+
+//  if (age < 13) {
+//      console.log(firstName + ' is a boy.');
+//  } else if (age >= 13 && age < 20) { // Between 13 and 20
+//      console.log(firstName + ' is a teenager.');
+//  } else if (age >= 20 && age < 30) {
+//      console.log(firstName + ' is a young man.');
+//  } else {
+//      console.log(firstName + ' is a man.');
+//  }
+
+/************************************
+ * Truthy and Falsy values and equality operators
+ ************************************/
+
+ // falsy values: undefined, null, 0, '', NaN
+ // truthy values: NOT falsy values
+
+//  var height;
+
+//  height = 23;
+//  if (height || height === 0) {
+//      console.log('Variable is defined');
+//  } else {
+//      console.log('Variable has NOT been defined');
+//  }
+
+//  // Equality operators
+//  if (height == '23') {
+//      console.log('The == operator does type coercion!');
+//  }
+
+//=================================
+// Coding Challenge 2
+//=================================
+
+var jScoreOne = 89;
+var jScoreTwo = 120;
+var jScoreThree = 103;
+var mScoreOne = 116;
+var mScoreTwo = 94;
+var mScoreThree = 123;
+var maryScoreOne = 97;
+var maryScoreTwo = 134;
+var maryScoreThree = 105;
+
+var jAverage = (jScoreOne + jScoreTwo + jScoreThree) / 3;
+var mAverage = (mScoreOne + mScoreTwo + mScoreThree) / 3;
+var maryAverage = (maryScoreOne + maryScoreTwo + maryScoreThree) / 3;
+
+if (jAverage > mAverage && jAverage > maryAverage) {
+    console.log("John's team wins with an average score of", jAverage);
+} else if (mAverage > maryAverage) {
+    console.log("Mikes team wins with an average score of", mAverage);
+} else {
+    console.log("Mary's team wins with an average score of", maryAverage);
+}
