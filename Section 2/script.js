@@ -409,25 +409,224 @@ if (x === 5) {
 //=================================
 // Coding Challenge 2
 //=================================
+//***** My Solution *****
 
-var jScoreOne = 89;
-var jScoreTwo = 120;
-var jScoreThree = 103;
-var mScoreOne = 116;
-var mScoreTwo = 94;
-var mScoreThree = 123;
-var maryScoreOne = 97;
-var maryScoreTwo = 134;
-var maryScoreThree = 105;
+// var jScoreOne = 89;
+// var jScoreTwo = 120;
+// var jScoreThree = 103;
+// var mScoreOne = 116;
+// var mScoreTwo = 94;
+// var mScoreThree = 123;
+// var maryScoreOne = 97;
+// var maryScoreTwo = 134;
+// var maryScoreThree = 105;
 
-var jAverage = (jScoreOne + jScoreTwo + jScoreThree) / 3;
-var mAverage = (mScoreOne + mScoreTwo + mScoreThree) / 3;
-var maryAverage = (maryScoreOne + maryScoreTwo + maryScoreThree) / 3;
+// var jAverage = (jScoreOne + jScoreTwo + jScoreThree) / 3;
+// var mAverage = (mScoreOne + mScoreTwo + mScoreThree) / 3;
+// var maryAverage = (maryScoreOne + maryScoreTwo + maryScoreThree) / 3;
 
-if (jAverage > mAverage && jAverage > maryAverage) {
-    console.log("John's team wins with an average score of", jAverage);
-} else if (mAverage > maryAverage) {
-    console.log("Mikes team wins with an average score of", mAverage);
-} else {
-    console.log("Mary's team wins with an average score of", maryAverage);
-}
+// if (jAverage > mAverage && jAverage > maryAverage) {
+//     console.log("John's team wins with an average score of", jAverage);
+// } else if (mAverage > maryAverage) {
+//     console.log("Mikes team wins with an average score of", mAverage);
+// } else {
+//     console.log("Mary's team wins with an average score of", maryAverage);
+// }
+
+// ***** Course Solution *****
+
+// var scoreJohn = (110 + 120 + 103) / 3;
+// var scoreMike = (116 + 94 + 123) / 3;
+// var scoreMary = (97 + 134 + 102) / 3;
+// console.log(scoreJohn, scoreMike, scoreMary);
+
+// if (scoreJohn > scoreMike && socreJohn > scoreMary) {
+//     console.log("John's team wins with " + scoreJohn + " points");
+// } else if (scoreMike > scoreJohn && scoreMike > scoreMary) {
+//     console.log("Mike's team wins with " + scoreMike + " points");
+// } else if (scoreMary > scoreJohn && scoreMary > scoreMike) {
+//     console.log("Mary's team wins with " + scoreMary + " points");
+// } else {
+//     console.log("There is a draw");
+// }
+// if (scoreJohn > scoreMike) {
+//     console.log("John's team wins with " + scoreJohn + " points");
+// } else if (scoreMike > scoreJohn) {
+//     console.log("Mike's team wins with " + scoreMike + " points");
+// } else {
+//     console.log("There is a draw");
+// }
+
+//=================================
+// Functions
+//=================================
+
+// function calculateAge(birthYear) {
+//     return 2018 - birthYear;
+// }
+
+// var ageJohn = calculateAge(1990);
+// var ageMike = calculateAge(1948);
+// var ageJane = calculateAge(1969);
+
+// console.log(ageJohn, ageMike, ageJane);
+
+// function yearsUntilRetirement(year, firstName){
+//     var age = calculateAge(year);
+//     var retirement = 65 - age;
+
+//     if (retirement > 0) {
+//         console.log(firstName + " retires in " + retirement + " years.");
+//     } else { 
+//         console.log(firstName + " is already retired.");
+//     }
+// }
+
+// yearsUntilRetirement(1990, "John");
+// yearsUntilRetirement(1948, "Mike");
+// yearsUntilRetirement(1969, "Jane");
+
+//=================================
+// Function Statements and Expressions
+//=================================
+
+// Function declaration
+// function whatDoYouDo(job, firstName) {
+
+// }
+
+// Function expression
+// var whatDoYouDo = function(job, firstName) {
+//     switch(job) {
+//         case 'teacher':
+//             return firstName + " teaches kids how to code";
+//         case 'driver':
+//             return firstName + " drives race cars";
+//         case 'designer':
+//             return firstName + " designs pretty things";
+//         default:
+//             return firstName + " hasn't decided what to do yet";
+//     }
+// }
+
+// console.log(whatDoYouDo("teacher", "John"));
+// console.log(whatDoYouDo("driver", "Mike"));
+// console.log(whatDoYouDo("retired", "Jane"));
+
+/************************************
+ * Arrays
+ ************************************/
+
+//  // Initialize new array
+//  var names = ['John', 'Mark', 'Jane'];
+//  var years = new Array(1990, 1969, 1948);
+
+//  console.log(names[0], years[0]);
+//  console.log(names.length);
+
+//  // Matate array data
+//  names[1] = "Ben";
+//  names[names.length] = "Mary";
+//  console.log(names);
+ 
+//  // Different data types
+//  var john = ["John", "Smith", 1990, "designer", false];
+
+//  john.push("blue");
+//  john.unshift("Mr");
+//  console.log(john);
+
+//  john.pop();
+//  john.pop();
+//  john.shift();
+//  console.log(john);
+
+//  console.log(john.indexOf(1990));
+
+//  var isDesigner = john.indexOf("designer") === -1 ? "John is NOT a designer" : "John IS a designer";
+//  console.log(isDesigner);
+
+/************************************
+ * Coding Challenge 3
+ ************************************/
+
+// **** My solution *****
+
+// var tips = [];
+// var finalBill = [];
+
+// function calculateTip (bill) {
+//     if (bill < 50) {
+//         var tipTwenty = bill * 0.2;
+//         tips.push(tipTwenty);
+//         finalBill.push(bill + tipTwenty);
+//     } else if (bill >= 50 && bill < 200) {
+//         var tipFifteen = bill * 0.15;
+//         tips.push(tipFifteen);
+//         finalBill.push(bill + tipFifteen);
+//     } else {
+//         var tipTen =  bill * 0.10;
+//         tips.push(tipTen);
+//         finalBill.push(bill + tipTen);
+//     }
+// } 
+
+// calculateTip(124);
+// calculateTip(48);
+// calculateTip(268);
+
+// console.log(tips, finalBill);
+
+// ***** Course Solution *****
+
+// function tipCalculator(bill) {
+//     var percentage;
+//     if (bill < 50) {
+//         percentage = .2;
+//     } else if (bill >= 50 &&  bill < 200) {
+//         percentage = .15;
+//     } else {
+//         percentage = .1;
+//     }
+//     return percentage * bill;
+// }
+
+// var bills = [124, 48, 268];
+// var tips  = [tipCalculator(bills[0]),
+//             tipCalculator(bills[1]),
+//             tipCalculator(bills[2])];
+
+// var finalValues = [bills[0] + tips[0],
+//                     bills[1] + tips[1],
+//                     bills[2] + tips[2],]
+
+// console.log(tips, finalValues);
+
+/************************************
+ * Objects and properties
+ ************************************/
+
+ // Object Literal
+ var john = {
+      firstName: "John", 
+      lastName: "Smith",
+      birthYear: 1990,
+      family: ["Jane", "Mark", "Bob", "Emily"],
+      job: "teacher",
+      isMarried: false
+ };
+ console.log(john.firstName);
+ console.log(john["lastName"]);
+ var x = "birthYear";
+ console.log(john[x]);
+
+ john.job = "designer";
+ john["isMarried"] = true;
+ console.log(john);
+
+ // new Object syntax
+ var jane = new Object();
+ jane.name = "Jane";
+ jane.birthYear = 1969;
+ jane["lastName"] = "Smith";
+ console.log(jane);
