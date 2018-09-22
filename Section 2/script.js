@@ -606,27 +606,91 @@ if (x === 5) {
  * Objects and properties
  ************************************/
 
- // Object Literal
- var john = {
-      firstName: "John", 
-      lastName: "Smith",
-      birthYear: 1990,
-      family: ["Jane", "Mark", "Bob", "Emily"],
-      job: "teacher",
-      isMarried: false
- };
- console.log(john.firstName);
- console.log(john["lastName"]);
- var x = "birthYear";
- console.log(john[x]);
+//  // Object Literal
+//  var john = {
+//       firstName: "John", 
+//       lastName: "Smith",
+//       birthYear: 1990,
+//       family: ["Jane", "Mark", "Bob", "Emily"],
+//       job: "teacher",
+//       isMarried: false
+//  };
+//  console.log(john.firstName);
+//  console.log(john["lastName"]);
+//  var x = "birthYear";
+//  console.log(john[x]);
 
- john.job = "designer";
- john["isMarried"] = true;
- console.log(john);
+//  john.job = "designer";
+//  john["isMarried"] = true;
+//  console.log(john);
 
- // new Object syntax
- var jane = new Object();
- jane.name = "Jane";
- jane.birthYear = 1969;
- jane["lastName"] = "Smith";
- console.log(jane);
+//  // new Object syntax
+//  var jane = new Object();
+//  jane.name = "Jane";
+//  jane.birthYear = 1969;
+//  jane["lastName"] = "Smith";
+//  console.log(jane);
+
+/************************************
+ * Objects and Methods
+ ************************************/
+
+// var john = {
+//     firstName: "John", 
+//     lastName: "Smith",
+//     birthYear: 1990,
+//     family: ["Jane", "Mark", "Bob", "Emily"],
+//     job: "teacher",
+//     isMarried: false,
+//     calcAge: function() {
+//       this.age = 2018 - this.birthYear;
+//     }
+// };
+
+// john.calcAge();
+// console.log(john);
+
+/************************************
+ * Coding Challenge 4
+ ************************************/
+
+ // var markHeight = 2.1;
+// var johnHeight = 2.2;
+// var markWeight = 130;
+// var johnWeight = 165;
+
+// var markBmi = markWeight / (markHeight * markHeight);
+// var johnBmi = johnWeight / (johnHeight * johnHeight);
+// var higher = markBmi > johnBmi;
+// console.log("Is Mark's BMI higher than John's? ", higher);
+
+var mark = {
+  firstName: "Mark",
+  lastName: "Jones",
+  height: 2.3,
+  weight: 165,
+  calcBmi: function() {
+    this.bmi = (this.weight / (this.height * this.height));
+  }
+};
+var john = {
+  firstName: "John",
+  lastName: "Smith",
+  height: 2.3,
+  weight: 165,
+  calcBmi: function() {
+    this.bmi = (this.weight / (this.height * this.height));
+  }
+};
+john.calcBmi();
+mark.calcBmi();
+if (mark.bmi > john.bmi) {
+  console.log(mark.firstName + " " + mark.lastName + " "+ "has the higher BMI");
+} else if (john.bmi > mark.bmi) {
+  console.log(john.firstName + " " +john.lastName + " " + "has the higher BMI");
+} else {
+  console.log("They have the same BMI");
+}
+
+console.log(mark);
+console.log(john);
