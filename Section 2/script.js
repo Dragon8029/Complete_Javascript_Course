@@ -850,4 +850,4 @@ function calcAverage(tips) {
    console.log(john.fullName + '\'s family pays higher tips, with an average of $' + john.average);
  } else if (mark.average > john.average) {
    console.log(mark.fullName + '\'s family pays higher tips, with an average of $' + mark.average);
- }
+ } 
